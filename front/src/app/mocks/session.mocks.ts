@@ -14,4 +14,8 @@ export const userRequestMock: SessionInformation = {
 
 export const createSessionServiceMock = (): Partial<jest.Mocked<SessionService>> => ({
   isLogged: false,
+  sessionInformation: userRequestMock,
+  $isLogged: jest.fn().mockReturnValue(of(false)),
+  logIn: jest.fn(),
+  logOut: jest.fn(),
 });
