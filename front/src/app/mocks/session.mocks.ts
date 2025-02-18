@@ -1,4 +1,6 @@
+import { of } from 'rxjs';
 import { SessionInformation } from '../interfaces/sessionInformation.interface';
+import { SessionService } from '../services/session.service';
 
 export const userRequestMock: SessionInformation = {
   token:
@@ -10,3 +12,11 @@ export const userRequestMock: SessionInformation = {
   lastName: 'Admin',
   admin: true,
 };
+
+export const createSessionServiceMock = (): Partial<jest.Mocked<SessionService>> => ({
+  isLogged: false,
+  sessionInformation: userRequestMock,
+  $isLogged: jest.fn().mockReturnValue(of(false)),
+  logIn: jest.fn(),
+  logOut: jest.fn(),
+});
