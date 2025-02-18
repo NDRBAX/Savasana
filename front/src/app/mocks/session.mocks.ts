@@ -1,3 +1,4 @@
+import { of } from 'rxjs';
 import { SessionInformation } from '../interfaces/sessionInformation.interface';
 import { SessionService } from '../services/session.service';
 
