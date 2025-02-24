@@ -1,8 +1,11 @@
-import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
-import { LoginRequest } from '../features/auth/interfaces/loginRequest.interface';
-import { RegisterRequest } from '../features/auth/interfaces/registerRequest.interface';
 import { Router } from '@angular/router';
-import { SessionService } from '../services/session.service';
+import { LoginRequest } from 'src/app/features/auth/interfaces/loginRequest.interface';
+import { RegisterRequest } from 'src/app/features/auth/interfaces/registerRequest.interface';
+import { AuthService } from 'src/app/features/auth/services/auth.service';
+import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
+
+
+
 
 export const authPath = 'api/auth';
 
@@ -44,3 +47,8 @@ export const invalidRegisterRequestMock: RegisterRequest = {
 export const createRouterMock = (): Partial<jest.Mocked<Router>> => ({
   navigate: jest.fn(),
 });
+
+export const createAuthServiceMock = (): Partial<jest.Mocked<AuthService>> => ({
+  register: jest.fn(),
+  login: jest.fn()
+})
