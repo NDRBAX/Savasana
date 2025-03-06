@@ -33,8 +33,8 @@ Welcome to **Savasana**, a full-stack application designed to manage yoga studio
 
 Each section has its own **README file** with specific installation and setup instructions:  
 
-- 📄 **Frontend** (`/frontend/README.md`) – Angular 14 application setup and usage  
-- 📄 **Backend** (`/backend/README.md`) – Spring Boot API setup and usage  
+- 📄 **Frontend** (`/front/README.md`) – Angular 14 application setup and usage  
+- 📄 **Backend** (`/back/README.md`) – Spring Boot API setup and usage  
 
 ---
 
