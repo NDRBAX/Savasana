@@ -44,7 +44,7 @@ Before running the application, ensure that you have the following installed:
 ## 🚀 Installation & Setup  
 
 ### 1️⃣ Install dependencies  
-```sh
+```bash
 mvn clean install
 ```
 
@@ -78,7 +78,7 @@ PASSWORD=your_password
 ```
 
 ### 3️⃣ Run the backend  
-```sh
+```bash
 mvn spring-boot:run
 ```
 
@@ -96,14 +96,14 @@ http://localhost:8080
 JUnit 5 and Mockito ensure the reliability of individual components and their interactions.  
 
 #### 📌 Run all tests  
-```sh
+```bash
 mvn clean test
 ```
 
 #### 📊 Test Coverage
 
 To generate the coverage report:  
-```sh
+```bash
 mvn jacoco:report
 ```
 
