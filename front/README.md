@@ -1,72 +1,131 @@
-# Yoga
+# 🧘 Savasana - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+Welcome to the Savasana app frontend, built with **Angular 14**. This application allows users to register, log in, and book yoga sessions, while administrators can manage sessions and users.  
 
-## Start the project
+This README provides setup instructions and details on testing using **Jest** and **Cypress**.  
 
-Git clone:
+---
 
-> git clone https://github.com/OpenClassrooms-Student-Center/P5-Full-Stack-testing
+## 📂 Project Structure  
 
-Go inside folder:
+```
+/front
+│── /src           # Application source code
+│── /cypress       # Cypress end-to-end tests
+│── /jest.config.js # Jest configuration
+│── angular.json   # Angular project configuration
+│── package.json   # Dependencies and scripts
+│── README.md      # You are here
+```
 
-> cd yoga
+---
 
-Install dependencies:
+## 🛠️ Technologies Used  
 
-> npm install
+- **Framework**: Angular 14  
+- **UI Components**: Angular Material, Angular Flex-Layout  
+- **Testing**:  
+  - **Unit & Integration**: Jest  
+  - **End-to-End (E2E)**: Cypress  
 
-Launch Front-end:
+---
 
-> npm run start;
+## 📋 Requirements  
 
+Before running the application, ensure that you have the following installed:  
 
-## Ressources
+- **Node.js 16**  
+- **Angular CLI 14**  
 
-### Mockoon env 
+---
 
-### Postman collection
+## 🚀 Installation & Setup  
 
-For Postman import the collection
+### 1️⃣ Install dependencies  
+```sh
+yarn install
+```
 
-> ressources/postman/yoga.postman_collection.json 
+### 2️⃣ Start the development server  
+```sh
+yarn start
+```
 
-by following the documentation: 
+This will launch the frontend at:  
+```
+http://localhost:4200
+```
 
-https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman
+---
 
+## ✅ Testing  
 
-### MySQL
+### 🧪 Unit & Integration Tests (Jest)  
 
-SQL script for creating the schema is available `ressources/sql/script.sql`
+Unit and integration tests ensure the reliability of individual components and services. Jest is used as the testing framework.  
 
-By default the admin account is:
-- login: yoga@studio.com
-- password: test!1234
+#### 📌 Run all unit & integration tests  
+```sh
+yarn test
+```
 
+#### 🔄 Watch mode (re-run tests on file changes)  
+```sh
+yarn test:watch
+```
 
-### Test
+#### 📊 Test Coverage  
+Test coverage must be **at least 80%**, with at least **30% integration tests**.  
 
-#### E2E
+To generate the coverage report:  
+```sh
+yarn test --coverage
+```
 
-Launching e2e test:
+Coverage results will be available in:
+```
+front/coverage/jest/lcov-report/index.html
+```
 
-> npm run e2e
+<div align="center" id="top"> 
+  <img src="../ressources/coverage/jest_coverage.png" alt="Savasana" height="350px" />
+</div>
 
-Generate coverage report (you should launch e2e test before):
+You can also view the coverage report in your browser:
+```bash
+open coverage/jest/lcov-report/index.html
+```
+---
 
-> npm run e2e:coverage
+### 🌐 End-to-End (E2E) Tests (Cypress)  
 
-Report is available here:
+Cypress is used to test the full user experience, ensuring the app functions correctly from **login** to **booking a session**.  
 
-> front/coverage/lcov-report/index.html
+#### 📌 Run Cypress in interactive mode  
+```sh
+yarn cypress:open
+```
 
-#### Unitary test
+#### 📌 Run Cypress tests in headless mode  
+```sh
+yarn cypress:run
+```
 
-Launching test:
+#### 📌 Generate Cypress test coverage report  
+```sh
+yarn e2e:coverage
+```
 
-> npm run test
+Coverage results will be available in:
+```
+front/coverage/cypress/lcov-report/index.html
+```
 
-for following change:
+<div align="center" id="top"> 
+  <img src="../ressources/coverage/cypress_coverage.png" alt="Savasana" height="350px" />
+</div>
 
-> npm run test:watch
+You can also view the coverage report in your browser:
+```bash
+open coverage/lcov-report/index.html
+```
