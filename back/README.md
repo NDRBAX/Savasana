@@ -76,7 +76,6 @@ DATABASE=your_database_name
 USERNAME=your_username
 PASSWORD=your_password
 ```
-```
 
 ### 3️⃣ Run the backend  
 ```sh
