@@ -98,7 +98,7 @@ JUnit 5 and Mockito ensure the reliability of individual components and their in
 
 #### 📌 Run all tests  
 ```sh
-mvn test
+mvn clean test
 ```
 
 #### 📊 Test Coverage

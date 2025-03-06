@@ -130,8 +130,18 @@
 						<goals>
 							<goal>report</goal>
 						</goals>
+							<configuration>
+						<excludes>
+								<exclude>**/dto/**</exclude>
+								<exclude>**/models/**</exclude>
+								<exclude>**/payload/request/**</exclude>
+								<exclude>**/payload/response/**</exclude>
+								<exclude>**/exception/**</exclude>
+								<exclude>**/lombok/**</exclude>
+							</excludes>
+						</configuration>
 					</execution>
-
+				
 					<!-- <execution>
 						<id>jacoco-check</id>
 						<goals>
