@@ -27,6 +27,8 @@ target/
 /.nb-gradle/
 build/
 
+.env
+
 ### VS Code ###
 .vscode/
 **/.DS_Store
