@@ -5,6 +5,8 @@ export default defineConfig({
     screenshotsFolder: "cypress/screenshots",
     fixturesFolder: "cypress/fixtures",
     video: false,
+    viewportWidth: 1000,
+    viewportHeight: 1500,
 
     e2e: {
         setupNodeEvents(on, config) {
